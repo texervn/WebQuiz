@@ -52,7 +52,8 @@ class MakeWebQuiz(object):
         self.metadata = metadata
         self.quiz_name = quiz_name.split('.')[0]
         self.quiz_file, extension = quiz_file.split('.')
-        self.webquiz_url = settings['webquiz_url']
+        #self.webquiz_url = settings['webquiz_url']
+        self.webquiz_url = "http://www.maths.usyd.edu.au/u/mathas/WebQuiz/"
         if  self.webquiz_url[-1] == '/':
             self.webquiz_url =  self.webquiz_url[:len(self.webquiz_url)-1]
 
