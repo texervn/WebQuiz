@@ -20,6 +20,7 @@ import codecs
 import shutil
 import os
 import re
+import html
 
 import webquiz_templates
 import webquiz_util
@@ -89,7 +90,7 @@ class MakeWebQuiz(object):
         # now write the quiz to the html file
         with codecs.open(self.quiz_name + '.html', 'w', encoding='utf8') as file:
             # write the quiz in the specified format
-            file.write(self.options.write_web_page(self))
+            file.write(html.unescape(self.options.write_web_page(self)))
 
     def webquiz_debug(self, msg):
         r'''
